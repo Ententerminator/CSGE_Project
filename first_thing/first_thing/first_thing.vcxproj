@@ -90,12 +90,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>B:\DifferentFUN\Informatik\4.Semester\CGE\Project_Git\CGE\glut-3.7.6-bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>B:\DifferentFUN\Informatik\5.Semester\CSGE\project\glut-3.7.6-bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>B:\DifferentFUN\Informatik\4.Semester\CGE\Project_Git\CGE\glut-3.7.6-bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>B:\DifferentFUN\Informatik\5.Semester\CSGE\project\glut-3.7.6-bin;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -107,12 +107,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>B:\DifferentFUN\Informatik\4.Semester\CGE\Project_Git\CGE\glut-3.7.6-bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>B:\DifferentFUN\Informatik\5.Semester\CSGE\project\glut-3.7.6-bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>B:\DifferentFUN\Informatik\4.Semester\CGE\Project_Git\CGE\glut-3.7.6-bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>B:\DifferentFUN\Informatik\5.Semester\CSGE\project\glut-3.7.6-bin;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -159,29 +159,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="art.h" />
-    <ClInclude Include="funny_glitch.h" />
-    <ClInclude Include="light.h" />
-    <ClInclude Include="redraw_glitch.h" />
-    <ClInclude Include="second_thing.h" />
+    <ClInclude Include="art.hpp" />
+    <ClInclude Include="funny_glitch.hpp" />
+    <ClInclude Include="light.hpp" />
+    <ClInclude Include="redraw_glitch.hpp" />
+    <ClInclude Include="second_thing.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="tga.h" />
+    <ClInclude Include="tga.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="art.c" />
-    <ClCompile Include="first_thing.c" />
-    <ClCompile Include="funny_glitch.c" />
-    <ClCompile Include="light.c" />
-    <ClCompile Include="redraw_glitch.c" />
-    <ClCompile Include="second_thing.c" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="art.cpp" />
+    <ClCompile Include="first_thing.cpp" />
+    <ClCompile Include="funny_glitch.cpp" />
+    <ClCompile Include="light.cpp" />
+    <ClCompile Include="redraw_glitch.cpp" />
+    <ClCompile Include="second_thing.cpp" />
+    <ClCompile Include="stdafx.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="tga.c">
+    <ClCompile Include="tga.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
