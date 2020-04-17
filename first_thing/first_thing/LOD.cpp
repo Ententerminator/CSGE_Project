@@ -23,8 +23,7 @@ void drawTree(double dist1, double dist2, double dist3) {
 
 	}
 
-		printf("Sorted list in ascending order:\n");
-
+		printf("Sorted list in descending order:\n");
 		for (int i = 0; i < 3; i++)
 		{
 			printf("%f\n", dist[i]);
