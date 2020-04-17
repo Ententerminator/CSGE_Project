@@ -39,12 +39,26 @@ void drawTree(double dist1, double dist2, double dist3) {
 		if (dist[i] == dist1) {
 			glPushMatrix();
 			glColor4f(1.0f, 0.0f, 0.0f, 0.3f); // red triangle
-			glBegin(GL_TRIANGLES);
-			glVertex3f(0.0f, 0.0f, -4.0f);
-			glVertex3f(0.0f, 0.0f, 4.0f);
-			glVertex3f(0.0f, 8.0f, 0.0f);
-			glEnd();
-			glPopMatrix();
+			if (dist1 > 25) {
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 0.0f, -4.0f);
+				glVertex3f(0.0f, 0.0f, 4.0f);
+				glVertex3f(0.0f, 8.0f, 0.0f);
+				glEnd();
+			}
+			else {
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 0.0f, -4.0f); glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(0.0f, 4.0f, -2.0f);
+				glEnd();
+
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 0.0f, 4.0f); glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(0.0f, 4.0f, 2.0f);
+				glEnd();
+
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 4.0f, -2.0f); glVertex3f(0.0f, 4.0f, 2.0f); glVertex3f(0.0f, 8.0f, 0.0f);
+				glEnd();
+			}
 		}
 
 
@@ -52,11 +66,26 @@ void drawTree(double dist1, double dist2, double dist3) {
 			glPushMatrix();
 			glColor4f(0.0f, 1.0f, 0.0f, 0.3f); // green triangle
 			glTranslatef(-1.0f, 0.0f, -1.0f);
-			glBegin(GL_TRIANGLES);
-			glVertex3f(0.0f, 0.0f, -4.0f);
-			glVertex3f(0.0f, 0.0f, 4.0f);
-			glVertex3f(0.0f, 8.0f, 0.0f);
-			glEnd();
+			if (dist2 > 25) {
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 0.0f, -4.0f);
+				glVertex3f(0.0f, 0.0f, 4.0f);
+				glVertex3f(0.0f, 8.0f, 0.0f);
+				glEnd();
+			}
+			else {
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 0.0f, -4.0f); glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(0.0f, 4.0f, -2.0f);
+				glEnd();
+
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 0.0f, 4.0f); glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(0.0f, 4.0f, 2.0f);
+				glEnd();
+
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 4.0f, -2.0f); glVertex3f(0.0f, 4.0f, 2.0f); glVertex3f(0.0f, 8.0f, 0.0f);
+				glEnd();
+			}
 			glPopMatrix();
 		}
 
@@ -64,11 +93,26 @@ void drawTree(double dist1, double dist2, double dist3) {
 			glPushMatrix();
 			glColor4f(0.0f, 0.0f, 1.0f, 0.3f); //blue triangle
 			glTranslatef(-3.0f, 0.0f, 1.0f);
-			glBegin(GL_TRIANGLES);
-			glVertex3f(0.0f, 0.0f, -4.0f);
-			glVertex3f(0.0f, 0.0f, 4.0f);
-			glVertex3f(0.0f, 8.0f, 0.0f);
-			glEnd();
+			if (dist3 > 25) {
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 0.0f, -4.0f);
+				glVertex3f(0.0f, 0.0f, 4.0f);
+				glVertex3f(0.0f, 8.0f, 0.0f);
+				glEnd();
+			}
+			else {
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 0.0f, -4.0f); glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(0.0f, 4.0f, -2.0f);
+				glEnd();
+
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 0.0f, 4.0f); glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(0.0f, 4.0f, 2.0f);
+				glEnd();
+
+				glBegin(GL_TRIANGLES);
+				glVertex3f(0.0f, 4.0f, -2.0f); glVertex3f(0.0f, 4.0f, 2.0f); glVertex3f(0.0f, 8.0f, 0.0f);
+				glEnd();
+			}
 			glPopMatrix();
 		}
 	
@@ -85,13 +129,13 @@ void fractalTree(double dist) {
 
 	glColor4f(1.0f, 0.0f, 0.0f, 0.3f); // red triangle
 
-	if(dist > 40 ){
+	if(dist > 60 ){
 	glBegin(GL_TRIANGLES);
 	glVertex3f(0.0f, 0.0f, -4.0f);
 	glVertex3f(0.0f, 0.0f, 4.0f);
 	glVertex3f(0.0f, 8.0f, 0.0f);
 	glEnd();
-	}else if(dist > 20) {
+	}else if(dist > 40) {
 	glBegin(GL_TRIANGLES);
 	glVertex3f(0.0f, 0.0f, -4.0f); glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(0.0f, 4.0f, -2.0f);
 	glEnd();
@@ -104,7 +148,7 @@ void fractalTree(double dist) {
 	glVertex3f(0.0f, 4.0f, -2.0f); glVertex3f(0.0f, 4.0f, 2.0f); glVertex3f(0.0f, 8.0f, 0.0f);
 	glEnd();
 
-	}else{
+	}else if(dist > 20){
 	glBegin(GL_TRIANGLES);
 	glVertex3f(0.0f, 0.0f, -4.0f); glVertex3f(0.0f, 0.0f, -2.0f); glVertex3f(0.0f, 2.0f, -3.0f);
 	glEnd();
@@ -142,8 +186,33 @@ void fractalTree(double dist) {
 	glBegin(GL_TRIANGLES);
 	glVertex3f(0.0f, 2.0f, -3.0f); glVertex3f(0.0f, 2.0f, -1.0f); glVertex3f(0.0f, 4.0f, -2.0f);
 	glEnd();
+	}
+	else {
 
 
+		for(int l = 0; l < 4; l++){
+			glPushMatrix();
+			for (int k = 0; k < 4 - l; k++) {
+				glPushMatrix();
+				if(!((k==1) && (l==1))){
+				for (int j = 0; j < 2; j++) {
+					glPushMatrix();
+					for (int i = 0; i < 2 - j; i++) {
+						glBegin(GL_TRIANGLES);
+						glVertex3f(0.0f, 0.0f, -4.0f); glVertex3f(0.0f, 0.0f, -3.0f); glVertex3f(0.0f, 1.0f, -3.5f);
+						glEnd();
+						glTranslatef(0.0f, 0.0f, 1.0f);
+					}
+					glPopMatrix();
+					glTranslatef(0.0f, 1.0f, 0.5f);
+				}}
+				glPopMatrix();
+				glTranslatef(0.0f, 0.0f, 2.0f);
+			}
+			glPopMatrix();
+			glTranslatef(0.0f, 2.0f, 1.0f);
+		}
+		
 	}
 }
 
