@@ -1,6 +1,10 @@
 #pragma once
 #include <stdlib.h> // for exit
 
+//glew stuff
+#include <GL/glew.h>
+
+
 // opengl & glut stuff
 #include <GL/glut.h> 
 #include <GL/gl.h>  
