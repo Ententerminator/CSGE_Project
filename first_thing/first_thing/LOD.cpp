@@ -3,18 +3,41 @@
 
 void drawTree(double dist1, double dist2, double dist3) {
 
-	char color[3] = {'r', 'g', 'b'};
-	
+
+	//sorting distances
+	double dist[3] = { dist1, dist2, dist3 }; 
+	double swap = 0;
+	int n = 3;
+
+	for (int j = 0; j < n; j++)
+	{
+		for (int i = 0; i < n - j; i++)
+		{
+			if (dist[i] < dist[i + 1])
+			{
+				swap = dist[i];
+				dist[i] = dist[i + 1];
+				dist[i + 1] = swap;
+			}
+		}
+
+	}
+
+		printf("Sorted list in ascending order:\n");
+
+		for (int i = 0; i < 3; i++)
+		{
+			printf("%f\n", dist[i]);
+		}
 
 
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-	//min max suche mit distanzes und dann for schleife
 	
 	for (int i = 0; i < 3; i++) {
 
-		if (color[i] == 'r') {
+		if (dist[i] == dist1) {
 			glPushMatrix();
 			glColor4f(1.0f, 0.0f, 0.0f, 0.3f); // red triangle
 			glBegin(GL_TRIANGLES);
@@ -26,7 +49,7 @@ void drawTree(double dist1, double dist2, double dist3) {
 		}
 
 
-		if (color[i] == 'g') {
+		if (dist[i] == dist2) {
 			glPushMatrix();
 			glColor4f(0.0f, 1.0f, 0.0f, 0.3f); // green triangle
 			glTranslatef(-1.0f, 0.0f, -1.0f);
@@ -38,7 +61,7 @@ void drawTree(double dist1, double dist2, double dist3) {
 			glPopMatrix();
 		}
 
-		if(color[i] == 'b'){
+		if(dist[i] == dist3){
 			glPushMatrix();
 			glColor4f(0.0f, 0.0f, 1.0f, 0.3f); //blue triangle
 			glTranslatef(-3.0f, 0.0f, 1.0f);
